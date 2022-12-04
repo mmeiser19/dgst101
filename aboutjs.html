@@ -20,55 +20,15 @@
       padding: 16px;
     }
 
+    sup {
+      font-size: small;
+      vertical-align: super;
+      color: blue;
+    }
+
     .hangingindent {
       padding-left: 36px ;
       text-indent: -36px ;
-    }
-
-    /**
-    * Initialiazing a `footnotes` counter on the wrapper
-    */
-    article {
-      counter-reset: footnotes;
-    }
-
-    /**
-     * Inline footnotes references
-     * 1. Increment the counter at each new reference
-     * 2. Reset link styles to make it appear like regular text
-     */
-    a[aria-describedby="footnote-label"] {
-      counter-increment: footnotes; /* 1 */
-      text-decoration: none; /* 2 */
-      color: inherit; /* 2 */
-      cursor: default; /* 2 */
-      outline: none; /* 2 */
-    }
-
-    /**
-     * Actual numbered references
-     * 1. Display the current state of the counter (e.g. `[1]`)
-     * 2. Align text as superscript
-     * 3. Make the number smaller (since it's superscript)
-     * 4. Slightly offset the number from the text
-     * 5. Reset link styles on the number to show it's usable
-     */
-    a[aria-describedby="footnote-label"]::after {
-      content: '[' counter(footnotes) ']'; /* 1 */
-      vertical-align: super; /* 2 */
-      font-size: 1em; /* 3 */
-      margin-left: 2px; /* 4 */
-      color: blue; /* 5 */
-      text-decoration: underline; /* 5 */
-      cursor: pointer; /* 5 */
-    }
-
-    /**
-     * Resetting the default focused styles on the number
-     */
-    a[aria-describedby="footnote-label"]:focus::after {
-      outline: thin dotted;
-      outline-offset: 2px;
     }
   </style>
 </head>
@@ -98,18 +58,19 @@
   <h2 class="w3-center">WHAT IS JAVASCRIPT?</h2>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
     <div class="w3-half">
-      <p style="margin-top: 25px">JavaScript is a programming language that allows websites to be interactive, <a aria-describedby="footnote-label" href="#reference1">
-        "providing motion and behaviour to our limbs."</a> This allows complexity to be added to webpages,
-        rather than having them be static. This can <a aria-describedby="footnote-label" href="#reference2">
-          "make your website appear to be more modern and sophisticated."</a><br><br>
-      An example of JavaScript interactivity on a webpage would be a menu button <a aria-describedby="footnote-label" href="#reference3">
-        "that can be clicked to display a selection of areas on the website that you can navigate to."</a><br><br>
-      To the right is an image containing different menu icons that can be used with the help of JavaScript.
-      The Hamburger menu is commonly-used, as is the Chocolate menu, whereas some of the others, such as the Oreos and Cake
+      <p style="margin-top: 25px">JavaScript is a programming language that allows websites to be interactive,
+        "providing motion and behaviour to our limbs."<sup><a href="#fn1">1</a></sup> This allows complexity to be added to webpages,
+        rather than having them be static. This can
+          "make your website appear to be more modern and sophisticated."<sup><a href="#fn2">2</a></sup></p>
+      <p>An example of JavaScript interactivity on a webpage would be a menu button
+        "that can be clicked to display a selection of areas on the website that you can navigate to."<sup><a href="#fn3">3</a></sup></p>
+      <p>To the right is an image containing different menu icons that can be used with the help of JavaScript.
+      The Hamburger menu is commonly-used, as is the Chocolate menu, whereas some others, such as the Oreos and Cake
       menus, are not used all that often.</p>
     </div>
     <div class="w3-half">
       <img src="https://miro.medium.com/max/1400/1*cOu35vlm9wL4yhmdNE4v1Q.png" class="w3-image" width="500" height="294">
+      <p><sup ><a href="#fn4">4</a></sup></p>
     </div>
   </div>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
@@ -119,6 +80,7 @@
     </div>
     <div class="w3-half">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Google_Maps_Logo_2020.svg/2275px-Google_Maps_Logo_2020.svg.png" class="w3-image" width="200" height="294">
+      <p><sup ><a href="#fn5">5</a></sup></p>
     </div>
   </div>
 </div>
@@ -128,11 +90,16 @@
   <div>
     <h3 class="w3-center">Footnotes</h3>
     <ol>
-      <li id="reference1" style="max-width: 125ch" class="hangingindent">Bryan Miller, “HTML vs. CSS vs. Javascript: What’s
+      <li id="fn1" style="max-width: 125ch" class="hangingindent">Bryan Miller, “HTML vs. CSS vs. Javascript: What’s
         the Difference?,” Bryt Designs, December 9, 2019, <a href="https://brytdesigns.com/html-css-javascript-whats-the-difference" target="_blank">
           https://brytdesigns.com/html-css-javascript-whats-the-difference.</a></li>
-      <li id="reference2" style="max-width: 125ch" class="hangingindent">Bryan Miller.</li>
-      <li id="reference3" style="max-width: 125ch" class="hangingindent">Bryan Miller.</li>
+      <li id="fn2" style="max-width: 125ch" class="hangingindent">Bryan Miller.</li>
+      <li id="fn3" style="max-width: 125ch" class="hangingindent">Bryan Miller.</li>
+      <li id="fn4" style="max-width: 125ch" class="hangingindent">Menu Icons, n.d., Online Image, Medium, n.d.,
+        <a href="https://miro.medium.com/max/1400/1*cOu35vlm9wL4yhmdNE4v1Q.png" target="_blank">https://miro.medium.com/max/1400/1*cOu35vlm9wL4yhmdNE4v1Q.png.</a></li>
+      <li id="fn5" style="max-width: 125ch" class="hangingindent">Google Maps Logo, n.d., Online Image, Wikimedia Commons, n.d.,
+        <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Google_Maps_Logo_2020.svg/2275px-Google_Maps_Logo_2020.svg.png" target="_blank">Google Maps Logo, n.d., Online Image, Wikimedia, n.d.,
+          <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Google_Maps_Logo_2020.svg/2275px-Google_Maps_Logo_2020.svg.png" target="_blank">https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Google_Maps_Logo_2020.svg/2275px-Google_Maps_Logo_2020.svg.png.</a></li>
     </ol>
   </div><br>
   <p class="w3-center">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>

@@ -20,55 +20,15 @@
             padding: 16px;
         }
 
+        sup {
+            font-size: small;
+            vertical-align: super;
+            color: blue;
+        }
+
         .hangingindent {
             padding-left: 36px ;
             text-indent: -36px ;
-        }
-
-        /**
-        * Initialiazing a `footnotes` counter on the wrapper
-        */
-        article {
-            counter-reset: footnotes;
-        }
-
-        /**
-         * Inline footnotes references
-         * 1. Increment the counter at each new reference
-         * 2. Reset link styles to make it appear like regular text
-         */
-        a[aria-describedby="footnote-label"] {
-            counter-increment: footnotes; /* 1 */
-            text-decoration: none; /* 2 */
-            color: inherit; /* 2 */
-            cursor: default; /* 2 */
-            outline: none; /* 2 */
-        }
-
-        /**
-         * Actual numbered references
-         * 1. Display the current state of the counter (e.g. `[1]`)
-         * 2. Align text as superscript
-         * 3. Make the number smaller (since it's superscript)
-         * 4. Slightly offset the number from the text
-         * 5. Reset link styles on the number to show it's usable
-         */
-        a[aria-describedby="footnote-label"]::after {
-            content: '[' counter(footnotes) ']'; /* 1 */
-            vertical-align: super; /* 2 */
-            font-size: 1em; /* 3 */
-            margin-left: 2px; /* 4 */
-            color: blue; /* 5 */
-            text-decoration: underline; /* 5 */
-            cursor: pointer; /* 5 */
-        }
-
-        /**
-         * Resetting the default focused styles on the number
-         */
-        a[aria-describedby="footnote-label"]:focus::after {
-            outline: thin dotted;
-            outline-offset: 2px;
         }
     </style>
 </head>
@@ -100,10 +60,10 @@
         <div class="w3-half">
             <p>CSS creates the styling for a webpage, such as colors, layout, and formatting. Text can
             also be aligned(centered, to the left or right) Additionally, text can be given different fonts
-            along with indentation through the use of CSS.<br><br>
-            The stylization of webpages is done by <a aria-describedby="footnote-label" href="#reference1">"by adding 'style' code to
-            the HTML code that’s already found on your page."</a><br><br>
-            When styling HTML tags, each style declaration has a property and a value. The property is a
+            along with indentation through the use of CSS.</p>
+            <p>The stylization of webpages is done by "by adding 'style' code to
+            the HTML code that’s already found on your page."<sup><a href="#fn1">1</a></sup></p>
+            <p>When styling HTML tags, each style declaration has a property and a value. The property is a
             characteristic of an element and the value is a setting for the property. An example of a
             characteristic would be "color," and an example of a value for this property would be "red." In
             the image to the right, the property declaration states that text in <code>&lt;p&gt;</code> tags
@@ -111,6 +71,7 @@
         </div>
         <div class="w3-half">
             <br><img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png" class="w3-image" width="500" height="294">
+            <p><sup ><a href="#fn2">2</a></sup></p>
         </div>
     </div>
 </div>
@@ -120,40 +81,51 @@
     <h2 class="w3-center">Examples</h2><br><br>
     <div class="w3-row-padding w3-center">
         <div class="w3-half">
-            <p style="margin-top: 125px">An example webpage that has a colored header and footer<br><br>
-            The header is colored dark blue, whereas the footer is colored maroon. There is also a
+            <p style="margin-top: 125px">An example webpage that has a colored header and footer</p>
+            <p>The header is colored dark blue, whereas the footer is colored maroon. There is also a
             navigation sidebar with a list of webpages that the user can click on to navigate to.</p>
         </div>
         <div class="w3-half">
             <img src="https://media.cheggcdn.com/media%2F693%2F693b3a08-32bf-4303-8da5-3cfbe702ff12%2FphpVauJY9.png" class="w3-image" width="500" height="294">
+            <p><sup ><a href="#fn3">3</a></sup></p>
         </div>
     </div><br><br>
     <div class="w3-row-padding w3-center">
         <div class="w3-half" style="margin-top: auto">
-            <p style="margin-top: 75px">Another example of a webpage that has a gray header.<br><br>
-            Additionally, the page has a navigation bar underneath the header that contains links to other
+            <p style="margin-top: 75px">Another example of a webpage that has a gray header.</p>
+            <p>Additionally, the page has a navigation bar underneath the header that contains links to other
             webpages that are part of the site. On the right side of the page, there is a section that contains
             links to outside webpages. Both the navigation bar and the "Related" section are colored pink.
             Each section of the website is divided by a gray border.</p>
         </div>
         <div class="w3-half">
             <img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure/sample-website.png" class="w3-image" width="500" height="294">
+            <p><sup ><a href="#fn4">4</a></sup></p>
         </div>
     </div>
 </div>
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
+<footer class="w3-black w3-padding-64">
     <div>
         <h3 class="w3-center">Footnotes</h3>
         <ol>
-            <li id="reference1" style="max-width: 125ch" class="hangingindent">Bryan Miller, “HTML vs. CSS vs. Javascript: What’s
+            <li id="fn1" style="max-width: 125ch" class="hangingindent">Bryan Miller, “HTML vs. CSS vs. Javascript: What’s
                 the Difference?,” Bryt Designs, December 9, 2019, <a href="https://brytdesigns.com/html-css-javascript-whats-the-difference" target="_blank">
                 https://brytdesigns.com/html-css-javascript-whats-the-difference</a></li>
+            <li id="fn2" style="max-width: 125ch" class="hangingindent">CSS Color Example, n.d., Online image, MDN Web Docs, n.d.,
+                <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png" target="_blank">
+                https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png</a></li>
+            <li id="fn3" style="max-width: 125ch" class="hangingindent">CSS Example with Basic Header and Footer, n.d., Online image, Chegg, n.d.,
+                <a href="https://media.cheggcdn.com/media%2F693%2F693b3a08-32bf-4303-8da5-3cfbe702ff12%2FphpVauJY9.png" target="_blank">
+                https://media.cheggcdn.com/media%2F693%2F693b3a08-32bf-4303-8da5-3cfbe702ff12%2FphpVauJY9.png</a></li>
+            <li id="fn4" style="max-width: 125ch" class="hangingindent">Sample Website Styled with CSS, n.d., Online Image, Mozilla, n.d.,
+                <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure/sample-website.png" target="_blank">
+                https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure/sample-website.png</a></li>
         </ol>
     </div><br>
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-    <p><a href="https://github.com/mmeiser19/dgst101" title="github" target="_blank" class="w3-hover-text-green">Github</a></p>
+    <p class="w3-center">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+    <p class="w3-center"><a href="https://github.com/mmeiser19/dgst101" title="github" target="_blank" class="w3-hover-text-green">Github</a></p>
 </footer>
 </body>
 </html>
