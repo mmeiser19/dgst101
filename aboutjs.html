@@ -8,6 +8,69 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+    body, html {
+      height: 100%;
+      line-height: 1.8;
+    }
+
+    .w3-bar .w3-button {
+      padding: 16px;
+    }
+
+    .hangingindent {
+      padding-left: 36px ;
+      text-indent: -36px ;
+    }
+
+    /**
+    * Initialiazing a `footnotes` counter on the wrapper
+    */
+    article {
+      counter-reset: footnotes;
+    }
+
+    /**
+     * Inline footnotes references
+     * 1. Increment the counter at each new reference
+     * 2. Reset link styles to make it appear like regular text
+     */
+    a[aria-describedby="footnote-label"] {
+      counter-increment: footnotes; /* 1 */
+      text-decoration: none; /* 2 */
+      color: inherit; /* 2 */
+      cursor: default; /* 2 */
+      outline: none; /* 2 */
+    }
+
+    /**
+     * Actual numbered references
+     * 1. Display the current state of the counter (e.g. `[1]`)
+     * 2. Align text as superscript
+     * 3. Make the number smaller (since it's superscript)
+     * 4. Slightly offset the number from the text
+     * 5. Reset link styles on the number to show it's usable
+     */
+    a[aria-describedby="footnote-label"]::after {
+      content: '[' counter(footnotes) ']'; /* 1 */
+      vertical-align: super; /* 2 */
+      font-size: 1em; /* 3 */
+      margin-left: 2px; /* 4 */
+      color: blue; /* 5 */
+      text-decoration: underline; /* 5 */
+      cursor: pointer; /* 5 */
+    }
+
+    /**
+     * Resetting the default focused styles on the number
+     */
+    a[aria-describedby="footnote-label"]:focus::after {
+      outline: thin dotted;
+      outline-offset: 2px;
+    }
+  </style>
 </head>
 <body>
 <!-- Navbar (sit on top) -->
@@ -20,6 +83,7 @@
       <a href="aboutcss.html" class="w3-bar-item w3-button">WHAT IS CSS?</a>
       <a href="aboutjs.html" class="w3-bar-item w3-button">WHAT IS JAVASCRIPT?</a>
       <a href="references.html" class="w3-bar-item w3-button">REFERENCES</a>
+      <a href="https://github.com/mmeiser19/dgst101" class="w3-bar-item w3-button" target="_blank">GITHUB</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -28,37 +92,51 @@
     </a>
   </div>
 </div>
+
 <!-- About Section -->
 <div class="w3-container" style="padding:128px 16px" id="whatishtml">
-  <h3 class="w3-center">ABOUT THE COMPANY</h3>
-  <p class="w3-center w3-large">Key features of our company</p>
+  <h2 class="w3-center">WHAT IS JAVASCRIPT?</h2>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
-    <div class="w3-quarter">
-      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-      <p class="w3-large">Responsive</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    <div class="w3-half">
+      <p style="margin-top: 25px">JavaScript is a programming language that allows websites to be interactive, <a aria-describedby="footnote-label" href="#reference1">
+        "providing motion and behaviour to our limbs."</a> This allows complexity to be added to webpages,
+        rather than having them be static. This can <a aria-describedby="footnote-label" href="#reference2">
+          "make your website appear to be more modern and sophisticated."</a><br><br>
+      An example of JavaScript interactivity on a webpage would be a menu button <a aria-describedby="footnote-label" href="#reference3">
+        "that can be clicked to display a selection of areas on the website that you can navigate to."</a><br><br>
+      To the right is an image containing different menu icons that can be used with the help of JavaScript.
+      The Hamburger menu is commonly-used, as is the Chocolate menu, whereas some of the others, such as the Oreos and Cake
+      menus, are not used all that often.</p>
     </div>
-    <div class="w3-quarter">
-      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Passion</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    <div class="w3-half">
+      <img src="https://miro.medium.com/max/1400/1*cOu35vlm9wL4yhmdNE4v1Q.png" class="w3-image" width="500" height="294">
     </div>
-    <div class="w3-quarter">
-      <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Design</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+  </div>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-half">
+      <p style="margin-top: 75px">An example of a well-known website/application that uses JavaScript is Google Maps, which allows users to zoom
+        in or out of the map, along with being able to interact with businesses and locations that appear on the map.</p>
     </div>
-    <div class="w3-quarter">
-      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Support</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    <div class="w3-half">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Google_Maps_Logo_2020.svg/2275px-Google_Maps_Logo_2020.svg.png" class="w3-image" width="200" height="294">
     </div>
   </div>
 </div>
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+<footer class="w3-black w3-padding-64">
+  <div>
+    <h3 class="w3-center">Footnotes</h3>
+    <ol>
+      <li id="reference1" style="max-width: 125ch" class="hangingindent">Bryan Miller, “HTML vs. CSS vs. Javascript: What’s
+        the Difference?,” Bryt Designs, December 9, 2019, <a href="https://brytdesigns.com/html-css-javascript-whats-the-difference" target="_blank">
+          https://brytdesigns.com/html-css-javascript-whats-the-difference.</a></li>
+      <li id="reference2" style="max-width: 125ch" class="hangingindent">Bryan Miller.</li>
+      <li id="reference3" style="max-width: 125ch" class="hangingindent">Bryan Miller.</li>
+    </ol>
+  </div><br>
+  <p class="w3-center">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <p class="w3-center"><a href="https://github.com/mmeiser19/dgst101" title="github" target="_blank" class="w3-hover-text-green">Github</a></p>
 </footer>
 </body>
 </html>
