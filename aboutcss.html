@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+        body, html {
+            height: 100%;
+            line-height: 1.8;
+        }
+
+        .w3-bar .w3-button {
+            padding: 16px;
+        }
+    </style>
 </head>
 <body>
 <!-- Navbar (sit on top) -->
@@ -20,6 +32,7 @@
             <a href="aboutcss.html" class="w3-bar-item w3-button">WHAT IS CSS?</a>
             <a href="aboutjs.html" class="w3-bar-item w3-button">WHAT IS JAVASCRIPT?</a>
             <a href="references.html" class="w3-bar-item w3-button">REFERENCES</a>
+            <a href="https://github.com/mmeiser19/dgst101" class="w3-bar-item w3-button" target="_blank">GITHUB</a>
         </div>
         <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -28,9 +41,10 @@
         </a>
     </div>
 </div>
+
 <!-- About Section -->
 <div class="w3-container" style="padding:128px 16px" id="whatishtml">
-    <h3 class="w3-center">ABOUT THE COMPANY</h3>
+    <h3 class="w3-center">WHAT IS CSS?</h3>
     <p class="w3-center w3-large">Key features of our company</p>
     <div class="w3-row-padding w3-center" style="margin-top:64px">
         <div class="w3-quarter">
@@ -56,18 +70,36 @@
     </div>
 </div>
 
+<!-- Examples -->
+<!-- Examples Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px">
+    <h2 class="w3-center">Examples</h2><br><br>
+    <div class="w3-row-padding">
+        <div class="w3-col m6">
+            <p>An example webpage that has a colored header and footer. There is also a navigation sidebar
+            with a list of webpages that the user can click on to navigate to.</p>
+        </div>
+        <div class="w3-col m6">
+            <img src="https://media.cheggcdn.com/media%2F693%2F693b3a08-32bf-4303-8da5-3cfbe702ff12%2FphpVauJY9.png" class="w3-image" width="500" height="294">
+        </div>
+    </div><br><br>
+    <div class="w3-row-padding">
+        <div class="w3-col m6" style="margin-top: auto">
+            <p>Another example of a webpage that has a colored header and footer. Additionally, the page has
+            a navigation bar underneath the header that contains links to other webpages that are part of the
+            site. On the right side of the page, there is a section that contains links to outside webpages.
+            Each section of the website is divided by a gray border.</p>
+        </div>
+        <div class="w3-col m6">
+            <img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure/sample-website.png" class="w3-image" width="500" height="294">
+        </div>
+    </div>
+</div>
+
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
-    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-    <div class="w3-xlarge w3-section">
-        <i class="fa fa-facebook-official w3-hover-opacity"></i>
-        <i class="fa fa-instagram w3-hover-opacity"></i>
-        <i class="fa fa-snapchat w3-hover-opacity"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-        <i class="fa fa-twitter w3-hover-opacity"></i>
-        <i class="fa fa-linkedin w3-hover-opacity"></i>
-    </div>
     <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+    <p><a href="https://github.com/mmeiser19/dgst101" title="github" target="_blank" class="w3-hover-text-green">Github</a></p>
 </footer>
 </body>
 </html>
