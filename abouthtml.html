@@ -20,55 +20,15 @@
             padding: 16px;
         }
 
+        sup {
+            font-size: small;
+            vertical-align: super;
+            color: blue;
+        }
+
         .hangingindent {
             padding-left: 36px ;
             text-indent: -36px ;
-        }
-
-        /**
-        * Initialiazing a `footnotes` counter on the wrapper
-        */
-        article {
-            counter-reset: footnotes;
-        }
-
-        /**
-         * Inline footnotes references
-         * 1. Increment the counter at each new reference
-         * 2. Reset link styles to make it appear like regular text
-         */
-        a[aria-describedby="footnote-label"] {
-            counter-increment: footnotes; /* 1 */
-            text-decoration: none; /* 2 */
-            color: inherit; /* 2 */
-            cursor: default; /* 2 */
-            outline: none; /* 2 */
-        }
-
-        /**
-         * Actual numbered references
-         * 1. Display the current state of the counter (e.g. `[1]`)
-         * 2. Align text as superscript
-         * 3. Make the number smaller (since it's superscript)
-         * 4. Slightly offset the number from the text
-         * 5. Reset link styles on the number to show it's usable
-         */
-        a[aria-describedby="footnote-label"]::after {
-            content: '[' counter(footnotes) ']'; /* 1 */
-            vertical-align: super; /* 2 */
-            font-size: 1em; /* 3 */
-            margin-left: 2px; /* 4 */
-            color: blue; /* 5 */
-            text-decoration: underline; /* 5 */
-            cursor: pointer; /* 5 */
-        }
-
-        /**
-         * Resetting the default focused styles on the number
-         */
-        a[aria-describedby="footnote-label"]:focus::after {
-            outline: thin dotted;
-            outline-offset: 2px;
         }
     </style>
 </head>
@@ -98,28 +58,30 @@
     <h2 class="w3-center">WHAT IS HTML?</h2>
     <div class="w3-row-padding w3-center" style="margin-top:64px">
         <div class="w3-half">
-            <p>HyperText Markup Language(HTML) is what <a aria-describedby="footnote-label" href="#reference1">"defines
-            the content and structure of your website."</a> In other words, it is the skeleton of a webpage, providing the text
-            and images that make up the content on a webpage. HTML also determines<a aria-describedby="footnote-label" href="#reference2">
-            "what text and images show up and in what order"</a> by the order they are written in the HTML file,
-            along with what is included in said file.<br><br>
-            HTML can create heading tags (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, etc.),
+            <p>HyperText Markup Language(HTML) is what "defines
+            the content and structure of your website."<sup><a href="#fn1">1</a></sup> In other words, it is the skeleton of a webpage, providing the text
+            and images that make up the content on a webpage. HTML also determines
+            "what text and images show up and in what order"<sup><a href="#fn2" id="ref2">2</a></sup> by the order they are written in the HTML file,
+            along with what is included in said file.</p>
+            <p>HTML can create heading tags (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, etc.),
             which specify which type of header is used for certain text. Additionally, paragraph tags
             (<code>&lt;p&gt;</code>) can be used to indicate "body text," which is the text that makes
             up the body of the page, and which most of the text is written in.</p>
         </div>
         <div class="w3-half">
             <img src="https://www.w3schools.com/html/img_notepad.png" class="w3-image" width="500" height="294">
+            <p><sup ><a href="#fn3">3</a></sup></p>
         </div>
     </div><br>
     <div class="w3-row-padding w3-center" style="margin-top:64px">
         <div class="w3-half">
             <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/img_tag.png" class="w3-image" width="500" height="294">
+            <p><sup><a href="#fn4">4</a></sup></p>
         </div>
         <div class="w3-half">
             <p>Image tags (<code>&lt;img&gt</code>) can be used to embed images in a webpage. Every img tag must
-                have a source (src), which can either be a link or filepath of an image.<br><br>
-                Image tags can also include alt text, denoted by the <code>&lt;alt&gt</code> tag. Alt text is
+                have a source (src), which can either be a link or filepath of an image.</p>
+                <p>Image tags can also include alt text, denoted by the <code>&lt;alt&gt</code> tag. Alt text is
                 very useful for people who use screen readers, as it improves digital accessibility for those who
                 cannot see or have difficulty with sight.</p>
         </div>
@@ -128,14 +90,15 @@
         <div class="w3-half">
             <p style="margin-top: 50px">Hyperlink tags (<code>&lt;a href&gt</code>) are used to specify a hyperlink to another webpage,
             either one that is part of your website or one that leads to an entirely different website.
-            When using this type of tag, you must specify the URL of the page you want to link to.<br><br>
-            Additionally, you can set other attributes to the (<code>&lt;a href&gt</code>) tag, such as if
+            When using this type of tag, you must specify the URL of the page you want to link to.</p>
+            <p>Additionally, you can set other attributes to the (<code>&lt;a href&gt</code>) tag, such as if
             the link will open in the same tab or in a new tab. One attribute that each (<code>&lt;a href&gt</code>)
             tag must have is called anchor text, which is the clickable text that takes you to the new
             webpage.</p>
         </div>
         <div class="w3-half">
             <img src="https://lorelle.files.wordpress.com/2015/03/links-html-anchor-tag-code-breakdown-lorelle-wordpress-school.png" class="w3-image" width="500" height="294">
+            <p><sup><a href="#fn5">5</a></sup></p>
         </div>
     </div>
 </div>
@@ -151,6 +114,7 @@
         </div>
         <div class="w3-half">
             <img src="https://www.w3schools.com/html/img_chrome.png" class="w3-image" width="500" height="294">
+            <p><sup><a href="#fn6">6</a></sup></p>
         </div>
     </div><br><br>
     <div class="w3-row-padding w3-center">
@@ -160,6 +124,7 @@
         </div>
         <div class="w3-half">
             <img src="https://www.roseindia.net/tutorialfiles/31257.lists.jpg" class="w3-image" width="350" height="194">
+            <p><sup><a href="#fn7">7</a></sup></p>
         </div>
     </div>
 </div>
@@ -169,14 +134,29 @@
     <div>
         <h3 class="w3-center">Footnotes</h3>
         <ol>
-            <li id="reference1" style="max-width: 125ch" class="hangingindent">Nology Team, “HTML, CSS and JavaScript:
+            <li id="fn1" style="max-width: 125ch" class="hangingindent">Nology Team, “HTML, CSS and JavaScript:
                 The Anatomy of a Website | _nology Blog,” _nology, June 2, 2020,
                 <a href="https://www.nology.io/news/html-css-and-javascript-the-anatomy-of-a-website/" target="_blank">
                 https://www.nology.io/news/html-css-and-javascript-the-anatomy-of-a-website/.</a></li>
-            <li id="reference2" style="max-width: 125ch" class="hangingindent">Jason Brown, “Basic Building Blocks
+            <li id="fn2" style="max-width: 125ch" class="hangingindent">Jason Brown, “Basic Building Blocks
                 of Web Development,” Medium, October 27, 2018,
                 <a href="https://medium.com/@jasonbrown_23038/basic-building-blocks-of-web-development-6c267c511d62" target="_blank">
                 https://medium.com/@jasonbrown_23038/basic-building-blocks-of-web-development-6c267c511d62.</a></li>
+            <li id="fn3" style="max-width: 125ch" class="hangingindent">HTML Header and Paragraph Example, n.d., Online Image, W3Schools, n.d.,
+                <a href="https://www.w3schools.com/html/img_notepad.png" target="_blank">
+                https://www.w3schools.com/html/img_notepad.png.</a></li>
+            <li id="fn4" style="max-width: 125ch" class="hangingindent">HTML Img Tag Example, n.d., Online image, Amazon Web Services, n.d.,
+                <a href="https://cdo-curriculum.s3.amazonaws.com/media/uploads/img_tag.png" target="_blank">
+                https://cdo-curriculum.s3.amazonaws.com/media/uploads/img_tag.png.</a></li>
+            <li id="fn5" style="max-width: 125ch" class="hangingindent">HTML Anchor Tag Example, n.d., Online image, Lorelle on WordPress, n.d.,
+                <a href="https://lorelle.files.wordpress.com/2015/03/links-html-anchor-tag-code-breakdown-lorelle-wordpress-school.png" target="_blank">
+                https://lorelle.files.wordpress.com/2015/03/links-html-anchor-tag-code-breakdown-lorelle-wordpress-school.png.</a></li>
+            <li id="fn6" style="max-width: 125ch" class="hangingindent">Basic Rendered HTML Example, n.d., Online image, W3Schools, n.d.,
+                <a href="https://www.w3schools.com/html/img_chrome.png" target="_blank">
+                https://www.w3schools.com/html/img_chrome.png.</a></li>
+            <li id="fn7" style="max-width: 125ch" class="hangingindent">Rendered HTML List Example, n.d., Online Image, Rose India, n.d.,
+                <a href="https://www.roseindia.net/tutorialfiles/31257.lists.jpg" target="_blank">
+                https://www.roseindia.net/tutorialfiles/31257.lists.jpg.</a></li>
         </ol>
     </div><br>
     <p class="w3-center">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
