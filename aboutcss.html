@@ -8,29 +8,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-
-        body, html {
-            height: 100%;
-            line-height: 1.8;
-        }
-
-        .w3-bar .w3-button {
-            padding: 16px;
-        }
-
-        sup {
-            font-size: small;
-            vertical-align: super;
-            color: blue;
-        }
-
-        .hangingindent {
-            padding-left: 36px ;
-            text-indent: -36px ;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css.css">
 </head>
 <body>
 <!-- Navbar (sit on top) -->
@@ -54,23 +32,26 @@
 </div>
 
 <!-- About Section -->
-<div class="w3-container" style="padding:128px 16px" id="whatishtml">
+<div class="w3-container" style="padding:128px 16px" id="whatiscss">
     <h2 class="w3-center">WHAT IS CSS?</h2>
     <div class="w3-row-padding w3-center" style="margin-top:64px">
         <div class="w3-half">
-            <p>CSS creates the styling for a webpage, such as colors, layout, and formatting. Text can
-            also be aligned(centered, to the left or right) Additionally, text can be given different fonts
-            along with indentation through the use of CSS.</p>
+            <p style="margin-top: -5px">CSS creates the styling for a webpage, such as colors, layout, and formatting. Text can
+                also be aligned(centered, to the left or right) Additionally, text can be given different fonts
+                along with indentation through the use of CSS.</p>
             <p>The stylization of webpages is done by "by adding 'style' code to
-            the HTML code that’s already found on your page."<sup><a href="#fn1">1</a></sup></p>
+                the HTML code that’s already found on your page."<sup><a href="#fn1">1</a></sup></p>
             <p>When styling HTML tags, each style declaration has a property and a value. The property is a
-            characteristic of an element and the value is a setting for the property. An example of a
-            characteristic would be "color," and an example of a value for this property would be "red." In
-            the image to the right, the property declaration states that text in <code>&lt;p&gt;</code> tags
-            will be colored red.</p>
+                characteristic of an element and the value is a setting for the property. An example of a
+                characteristic would be "color," and an example of a value for this property would be "red." In
+                the image to the right, the property declaration states that text in <code>&lt;p&gt;</code> tags
+                will be colored red.</p>
         </div>
         <div class="w3-half">
-            <br><img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png" class="w3-image" width="500" height="294">
+            <img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png"
+                     class="w3-image" width="500" height="294" alt="An example of the HTML paragraph tag
+                     being given a color attribute where the color is set to red. The 'color' is the property
+                     that is being modified, and 'red' is the value being assigned to the property">
             <p><sup ><a href="#fn2">2</a></sup></p>
         </div>
     </div>
@@ -83,10 +64,14 @@
         <div class="w3-half">
             <p style="margin-top: 125px">An example webpage that has a colored header and footer</p>
             <p>The header is colored dark blue, whereas the footer is colored maroon. There is also a
-            navigation sidebar with a list of webpages that the user can click on to navigate to.</p>
+                navigation sidebar with a list of webpages that the user can click on to navigate to.</p>
         </div>
         <div class="w3-half">
-            <img src="https://media.cheggcdn.com/media%2F693%2F693b3a08-32bf-4303-8da5-3cfbe702ff12%2FphpVauJY9.png" class="w3-image" width="500" height="294">
+            <img src="https://media.cheggcdn.com/media%2F693%2F693b3a08-32bf-4303-8da5-3cfbe702ff12%2FphpVauJY9.png"
+                 class="w3-image" width="500" height="294" alt="A webpage with a blue header and a maroon
+                 footer. The header says 'My Website!' and the body of the page contains text denoted by
+                 header and paragraph HTML tags. There is also a sidebar that provides a menu of pages
+                 that are part of the website">
             <p><sup ><a href="#fn3">3</a></sup></p>
         </div>
     </div><br><br>
@@ -94,12 +79,16 @@
         <div class="w3-half" style="margin-top: auto">
             <p style="margin-top: 75px">Another example of a webpage that has a gray header.</p>
             <p>Additionally, the page has a navigation bar underneath the header that contains links to other
-            webpages that are part of the site. On the right side of the page, there is a section that contains
-            links to outside webpages. Both the navigation bar and the "Related" section are colored pink.
-            Each section of the website is divided by a gray border.</p>
+                webpages that are part of the site. On the right side of the page, there is a section that contains
+                links to outside webpages. Both the navigation bar and the "Related" section are colored pink.
+                Each section of the website is divided by a gray border.</p>
         </div>
         <div class="w3-half">
-            <img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure/sample-website.png" class="w3-image" width="500" height="294">
+            <img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure/sample-website.png"
+                 class="w3-image" width="500" height="294" alt="A webpage styled with CSS to have different
+                 sections of the website be separated from each other. These sections include the header, the
+                 navigation bar, the body, a section with links related to the content of the webpage, and
+                 a footer">
             <p><sup ><a href="#fn4">4</a></sup></p>
         </div>
     </div>
@@ -111,7 +100,8 @@
         <h3 class="w3-center">Footnotes</h3>
         <ol>
             <li id="fn1" style="max-width: 125ch" class="hangingindent">Bryan Miller, “HTML vs. CSS vs. Javascript: What’s
-                the Difference?,” Bryt Designs, December 9, 2019, <a href="https://brytdesigns.com/html-css-javascript-whats-the-difference" target="_blank">
+                the Difference?,” Bryt Designs, December 9, 2019,
+                <a href="https://brytdesigns.com/html-css-javascript-whats-the-difference" target="_blank">
                 https://brytdesigns.com/html-css-javascript-whats-the-difference</a></li>
             <li id="fn2" style="max-width: 125ch" class="hangingindent">CSS Color Example, n.d., Online image, MDN Web Docs, n.d.,
                 <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png" target="_blank">
@@ -124,8 +114,10 @@
                 https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure/sample-website.png</a></li>
         </ol>
     </div><br>
-    <p class="w3-center">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-    <p class="w3-center"><a href="https://github.com/mmeiser19/dgst101" title="github" target="_blank" class="w3-hover-text-green">Github</a></p>
+    <p class="w3-center">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS"
+       target="_blank" class="w3-hover-text-green">w3.css</a></p>
+    <p class="w3-center"><a href="https://github.com/mmeiser19/dgst101" title="github" target="_blank"
+       class="w3-hover-text-green">Github</a></p>
 </footer>
 </body>
 </html>
