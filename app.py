@@ -1,1 +1,2 @@
-from dgst101 import app
+from flask import Flask
+app = Flask(__name__)
