@@ -8,29 +8,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-
-        body, html {
-            height: 100%;
-            line-height: 1.8;
-        }
-
-        .w3-bar .w3-button {
-            padding: 16px;
-        }
-
-        sup {
-            font-size: small;
-            vertical-align: super;
-            color: blue;
-        }
-
-        .hangingindent {
-            padding-left: 36px ;
-            text-indent: -36px ;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css.css">
 </head>
 <body>
 <!-- Navbar (sit on top) -->
@@ -59,45 +37,56 @@
     <div class="w3-row-padding w3-center" style="margin-top:64px">
         <div class="w3-half">
             <p>HyperText Markup Language(HTML) is what "defines
-            the content and structure of your website."<sup><a href="#fn1">1</a></sup> In other words, it is the skeleton of a webpage, providing the text
-            and images that make up the content on a webpage. HTML also determines
-            "what text and images show up and in what order"<sup><a href="#fn2" id="ref2">2</a></sup> by the order they are written in the HTML file,
-            along with what is included in said file.</p>
-            <p>HTML can create heading tags (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, etc.),
-            which specify which type of header is used for certain text. Additionally, paragraph tags
-            (<code>&lt;p&gt;</code>) can be used to indicate "body text," which is the text that makes
-            up the body of the page, and which most of the text is written in.</p>
+                the content and structure of your website."<sup><a href="#fn1">1</a></sup>
+                In other words, it is the skeleton of a webpage, providing the text and images
+                that make up the content on a webpage. HTML also determines "what text and
+                images show up and in what order"<sup><a href="#fn2" id="ref2">2</a></sup> by
+                the order they are written in the HTML file, along with what is included in
+                said file.</p>
+            <p>HTML can create heading tags (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, etc.), which
+                specify which type of header is used for certain text. Additionally, paragraph
+                tags (<code>&lt;p&gt;</code>) can be used to indicate "body text," which is the text
+                that makes up the body of the page, and which most of the text is written in.</p>
         </div>
         <div class="w3-half">
-            <img src="https://www.w3schools.com/html/img_notepad.png" class="w3-image" width="500" height="294">
+            <img src="https://www.w3schools.com/html/img_notepad.png" class="w3-image" width="500"
+                 height="294" alt="Simple HTML with a header that reads 'My First Heading' and a body that
+                 reads 'My first paragraph'">
             <p><sup ><a href="#fn3">3</a></sup></p>
         </div>
     </div><br>
     <div class="w3-row-padding w3-center" style="margin-top:64px">
         <div class="w3-half">
-            <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/img_tag.png" class="w3-image" width="500" height="294">
+            <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/img_tag.png" class="w3-image"
+                 width="500" height="294" alt="A breakdown of the HTML img src tag, which includes the filename
+                 of the image and alt text">
             <p><sup><a href="#fn4">4</a></sup></p>
         </div>
         <div class="w3-half">
-            <p>Image tags (<code>&lt;img&gt</code>) can be used to embed images in a webpage. Every img tag must
-                have a source (src), which can either be a link or filepath of an image.</p>
-                <p>Image tags can also include alt text, denoted by the <code>&lt;alt&gt</code> tag. Alt text is
-                very useful for people who use screen readers, as it improves digital accessibility for those who
-                cannot see or have difficulty with sight.</p>
+            <p>Image tags (<code>&lt;img&gt</code>) can be used to embed images in a webpage. Every
+                img tag must have a source (src), which can either be a link or filepath of an
+                image.</p>
+            <p>Image tags can also include alt text, denoted by the <code>&lt;alt&gt</code> tag.
+                Alt text is very useful for people who use screen readers, as it improves digital
+                accessibility for those who cannot see or have difficulty with sight.</p>
         </div>
     </div><br>
     <div class="w3-row-padding w3-center" style="margin-top:64px">
         <div class="w3-half">
-            <p style="margin-top: 50px">Hyperlink tags (<code>&lt;a href&gt</code>) are used to specify a hyperlink to another webpage,
-            either one that is part of your website or one that leads to an entirely different website.
-            When using this type of tag, you must specify the URL of the page you want to link to.</p>
-            <p>Additionally, you can set other attributes to the (<code>&lt;a href&gt</code>) tag, such as if
-            the link will open in the same tab or in a new tab. One attribute that each (<code>&lt;a href&gt</code>)
-            tag must have is called anchor text, which is the clickable text that takes you to the new
-            webpage.</p>
+            <p style="margin-top: 50px">Hyperlink tags (<code>&lt;a href&gt</code>) are used to
+                specify a hyperlink to another webpage, either one that is part of your website
+                or one that leads to an entirely different website. When using this type of tag,
+                you must specify the URL of the page you want to link to.</p>
+            <p>Additionally, you can set other attributes to the (<code>&lt;a href&gt</code>) tag,
+                such as if the link will open in the same tab or in a new tab. One attribute that
+                each (<code>&lt;a href&gt</code>) tag must have is called anchor text, which is the
+                clickable text that takes you to the new webpage.</p>
         </div>
         <div class="w3-half">
-            <img src="https://lorelle.files.wordpress.com/2015/03/links-html-anchor-tag-code-breakdown-lorelle-wordpress-school.png" class="w3-image" width="500" height="294">
+            <img src="https://lorelle.files.wordpress.com/2015/03/links-html-anchor-tag-code-breakdown-lorelle-wordpress-school.png"
+                 class="w3-image" width="500" height="294" alt="A breakdown of the HTML hyperlink tag, <a href>,
+                 which contains a hyperlink, the title of the webpage the hyperlink goes to, and text displayed
+                 that can be clicked on to take the user to the webpage">
             <p><sup><a href="#fn5">5</a></sup></p>
         </div>
     </div>
@@ -108,22 +97,27 @@
     <h2 class="w3-center">Examples</h2><br><br>
     <div class="w3-row-padding w3-center">
         <div class="w3-half">
-            <p style="margin-top: 100px">A very basic example of HTML by using Header and Paragraph tags. The background is plain
-                white and the text is also plain, without any stylization, such as coloring, bolding, or
-                italicization.</p>
+            <p style="margin-top: 100px">A very basic example of HTML by using Header and Paragraph
+                tags. The background is plain white and the text is also plain, without any stylization,
+                such as coloring, bolding, or italicization.</p>
         </div>
         <div class="w3-half">
-            <img src="https://www.w3schools.com/html/img_chrome.png" class="w3-image" width="500" height="294">
+            <img src="https://www.w3schools.com/html/img_chrome.png" class="w3-image" width="500" height="294"
+                alt="HTML rendered in a browser that has a heading that reads 'My First Heading' and a
+                body that reads 'My first paragraph'">
             <p><sup><a href="#fn6">6</a></sup></p>
         </div>
     </div><br><br>
     <div class="w3-row-padding w3-center">
         <div class="w3-half">
-            <p style="margin-top: 200px">An example of HTML containing lists. The example
-            displays an unordered list, which uses bullet points, and an ordered list, which has numbered elements.</p>
+            <p style="margin-top: 200px">An example of HTML containing lists. The example displays an
+                unordered list, which uses bullet points, and an ordered list, which has numbered elements.</p>
         </div>
         <div class="w3-half">
-            <img src="https://www.roseindia.net/tutorialfiles/31257.lists.jpg" class="w3-image" width="350" height="194">
+            <img src="https://www.roseindia.net/tutorialfiles/31257.lists.jpg" class="w3-image" width="350"
+                 height="194" alt="HTML lists rendered in a browser. One of the lists is an unordered list,
+                 where each element is listed with bullet points. The other type of list displayed is an
+                 ordered list, where each element is listed with a number">
             <p><sup><a href="#fn7">7</a></sup></p>
         </div>
     </div>
@@ -159,8 +153,10 @@
                 https://www.roseindia.net/tutorialfiles/31257.lists.jpg.</a></li>
         </ol>
     </div><br>
-    <p class="w3-center">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-    <p class="w3-center"><a href="https://github.com/mmeiser19/dgst101" title="github" target="_blank" class="w3-hover-text-green">Github</a></p>
+    <p class="w3-center">Powered by <a href="https://www.w3schools.com/w3css/default.asp"
+       title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+    <p class="w3-center"><a href="https://github.com/mmeiser19/dgst101" title="github"
+       target="_blank" class="w3-hover-text-green">Github</a></p>
 </footer>
 </body>
 </html>
