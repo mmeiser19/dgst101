@@ -18,10 +18,24 @@
         .w3-bar .w3-button {
             padding: 16px;
         }
+
+        sup {
+            font-size: small;
+            vertical-align: super;
+            color: blue;
+        }
+
+        .hangingindent {
+            padding-left: 36px ;
+            text-indent: -36px ;
+        }
     </style>
     <script src="https://kit.fontawesome.com/ab15e4ac4a.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+<!-- REFERENCES -->
+<!-- https://www.interaction-design.org/literature/topics/web-design -->
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -52,72 +66,87 @@
     <a href="references.html" class="w3-bar-item w3-button">REFERENCES</a>
 </nav>
 
-<div class="w3-container" style="padding:128px 16px" id="whatishtml">
-  <h3 class="w3-center">WEB DESIGN</h3>
-  <p class="w3-center w3-large">Building Blocks of Web Design</p>
+<div class="w3-container" style="padding:128px 16px" id="webdesign">
+  <h2 class="w3-center">WEB DESIGN</h2>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
-    <div class="w3-third">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/120px-HTML5_logo_and_wordmark.svg.png"
-             class="w3-image" width="106" height="105">
-      <p class="w3-large">HTML</p>
-      <p>Text, images, and clickable links displayed on webpages</p>
+    <div class="w3-half" style="margin-top: -50px">
+        <p>Web design is the design of webpages displayed in browsers. In the past, web design was solely
+            focused on desktop browser, however in recent years, "design for mobile and tablet browsers has
+            become ever-increasingly important."<sup><a href="#fn1">1</a></sup></p>
+        <p>Web design can refer to "appearance, layout, and, in some cases, content of a
+            website."<sup><a href="#fn1">1</a></sup> The appearance of a webpage refers to the colors, fonts,
+            sizing, images, and videos that are displayed on the page. The layout of a webpage refers to how
+            content is structured. A good website is easy to use. As a matter of fact, "many webpages are designed with
+            a focus on simplicity, so that no extraneous information and functionality that might distract or
+            confuse users appears."<sup><a href="#fn1">1</a></sup></p>
+        <p>Webpages may contain functional elements, which are imperative in "giving your users the best
+            possible experience."<sup><a href="#fn2">2</a></sup> Some of these elements include "navigation,
+            user interactions, animations, speed, site structure, and cross-browser and cross-device
+            compatibility."<sup><a href="#fn2">2</a></sup> Not all of them have to be implemented, but the
+            easier a website is to use, the better.</p>
     </div>
-    <div class="w3-third">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/85px-CSS3_logo_and_wordmark.svg.png"
-             class="w3-image" width="75" height="75">
-        <p class="w3-large">CSS</p>
-        <p>Styles text, headers, and footers on webpages to make them more attractive</p>
-    </div>
-    <div class="w3-third">
-        <img src="https://i0.wp.com/theicom.org/wp-content/uploads/2016/03/js-logo.png?fit=500%2C500&ssl=1&w=640"
-             class="w3-image" width="105" height="105">
-        <p class="w3-large">JAVASCRIPT</p>
-        <p>Creates dynamic features on webpages that users can interact with</p>
+    <div class="w3-half">
+        <img src="https://img.freepik.com/free-vector/cartoon-web-design-background_52683-70879.jpg?w=2000"
+             class="w3-image" width="600" height="294"
+             alt="Web design graphic with a computer, a color palette, a pencil, letters, a notebook, and a light bulb">
+        <p><sup><a href="#fn3">3</a></sup></p>
     </div>
   </div>
 </div>
 
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-    <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-        <img id="img01" class="w3-image">
-        <p id="caption" class="w3-opacity w3-large"></p>
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="buildingblocks">
+    <h2 class="w3-center">BUILDING BLOCKS OF WEB DESIGN</h2>
+    <div class="w3-row-padding w3-center" style="margin-top:64px">
+        <div class="w3-third">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/120px-HTML5_logo_and_wordmark.svg.png"
+                 class="w3-image" width="106" height="105" alt="HTML5 logo">
+            <p><sup><a href="#fn4">4</a></sup></p>
+            <p class="w3-large">HTML</p>
+            <p>Text, images, and clickable links displayed on webpages</p>
+        </div>
+        <div class="w3-third">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/85px-CSS3_logo_and_wordmark.svg.png"
+                 class="w3-image" width="75" height="75" alt="CSS3 logo">
+            <p><sup><a href="#fn5">5</a></sup></p>
+            <p class="w3-large">CSS</p>
+            <p>Styles text, headers, and footers on webpages to make them more attractive</p>
+        </div>
+        <div class="w3-third">
+            <img src="https://i0.wp.com/theicom.org/wp-content/uploads/2016/03/js-logo.png?fit=500%2C500&ssl=1&w=640"
+                 class="w3-image" width="105" height="105" alt="JavaScript logo">
+            <p><sup><a href="#fn6">6</a></sup></p>
+            <p class="w3-large">JAVASCRIPT</p>
+            <p>Creates dynamic features on webpages that users can interact with</p>
+        </div>
     </div>
 </div>
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-    <p><a href="https://github.com/mmeiser19/dgst101" title="github" target="_blank" class="w3-hover-text-green">Github</a></p>
+<footer class="w3-black w3-padding-64">
+    <div>
+        <h3 class="w3-center">Footnotes</h3>
+        <ol>
+            <li id="fn1" style="max-width: 125ch" class="hangingindent">Interaction Design Foundation, “What Is Web Design?,” The Interaction Design Foundation (UX courses, 2010),
+                <a href="https://www.interaction-design.org/literature/topics/web-design" target="_blank">
+                https://www.interaction-design.org/literature/topics/web-design</a></li>
+            <li id="fn2" style="max-width: 125ch" class="hangingindent">Robin Gandy, “What Is Web Design? The Ultimate Guide to Website Design [2019],” Pagecloud.com, February 14, 2022,
+                <a href="https://www.pagecloud.com/blog/web-design-guide" target="_blank">
+                https://www.pagecloud.com/blog/web-design-guide</a></li>
+            <li id="fn3" style="max-width: 125ch" class="hangingindent">Web Design Graphic, n.d., Online image, Freepik, n.d.,
+                <a href="https://img.freepik.com/free-vector/cartoon-web-design-background_52683-70879.jpg?w=2000" target="_blank">
+                https://img.freepik.com/free-vector/cartoon-web-design-background_52683-70879.jpg?w=2000</a></li>
+            <li id="fn4" style="max-width: 125ch" class="hangingindent">HTML5 Logo, n.d., Online image, Wikimedia, n.d.,
+                <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/120px-HTML5_logo_and_wordmark.svg.png" target="_blank">
+                https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/120px-HTML5_logo_and_wordmark.svg.png</a></li>
+            <li id="fn5" style="max-width: 125ch" class="hangingindent">CSS3 Logo, n.d., Online image, Wikimedia, n.d.,
+                <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/85px-CSS3_logo_and_wordmark.svg.png" target="_blank">
+                https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/85px-CSS3_logo_and_wordmark.svg.png</a></li>
+            <li id="fn6" style="max-width: 125ch" class="hangingindent">JavaScript Logo, n.d., Online Image, Wikimedia, n.d.,
+                <a href="https://i0.wp.com/theicom.org/wp-content/uploads/2016/03/js-logo.png?fit=500%2C500&ssl=1&w=640" target="_blank">https://i0.wp.com/theicom.org/wp-content/uploads/2016/03/js-logo.png?fit=500%2C500&ssl=1&w=640</a></li>
+        </ol>
+    </div><br>
+    <p class="w3-center">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+    <p class="w3-center"><a href="https://github.com/mmeiser19/dgst101" title="github" target="_blank" class="w3-hover-text-green">Github</a></p>
 </footer>
-
-<script>
-    // Modal Image Gallery
-    function onClick(element) {
-        document.getElementById("img01").src = element.src;
-        document.getElementById("modal01").style.display = "block";
-        var captionText = document.getElementById("caption");
-        captionText.innerHTML = element.alt;
-    }
-
-
-    // Toggle between showing and hiding the sidebar when clicking the menu icon
-    var mySidebar = document.getElementById("mySidebar");
-
-    function w3_open() {
-        if (mySidebar.style.display === 'block') {
-            mySidebar.style.display = 'none';
-        } else {
-            mySidebar.style.display = 'block';
-        }
-    }
-
-    // Close the sidebar with the close button
-    function w3_close() {
-        mySidebar.style.display = "none";
-    }
-</script>
-
 </body>
 </html>
